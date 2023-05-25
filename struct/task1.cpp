@@ -57,7 +57,6 @@ Complex operator/(Complex z1, Complex z2)
     Complex result = {0, 0};
 
     double denominator = pow(z2.re, 2) + pow(z2.im, 2);
-
     result.re = (z1.re * z2.re + z1.im * z2.im) / denominator;
     result.im = (z1.im * z2.re - z1.re * z2.im) / denominator;
 
@@ -75,13 +74,10 @@ void print(Complex z)
 int main()
 {
     Complex a, b, c;
-
     cout << "Введите значение комплексного числа a: ";
     cin >> a.re >> a.im;
-
     cout << "Введите значение комплексного числа b: ";
     cin >> b.re >> b.im;
-
     cout << "Введите значение комплексного числа c: ";
     cin >> c.re >> c.im;
 

@@ -1,15 +1,17 @@
-#include <string>
-#include <fstream>
 #include <iostream>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-    ifstream file;
-    file.open("data.txt");
+    ifstream inFile;
+    inFile.open("data.txt");
 
-    if (!file)
+    cout << "Программа для нахождения самой длинной строки текста" << endl;
+
+    if (!inFile)
     {
         cerr << "Невозможно открыть файл!";
         exit(1);
@@ -21,7 +23,7 @@ int main()
     string line;
     int lineNumber = 1;
 
-    while (getline(file, line))
+    while (getline(inFile, line))
     {
         int lineLength = line.length();
 
@@ -37,7 +39,7 @@ int main()
     cout << "Номер самой длинной строки: " << maxLineNumber << endl;
     cout << "Длина самой длинной строки: " << maxLineLength << endl;
 
-    file.close();
+    inFile.close();
 
     return 0;
 }
